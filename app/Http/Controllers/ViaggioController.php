@@ -10,6 +10,8 @@ class ViaggioController extends Controller
 {
     public function index()
     {
-        return view('viaggi');
+        $viaggi = Viaggio::all();
+
+        return view('viaggi', compact('viaggi'));
     }
 }
